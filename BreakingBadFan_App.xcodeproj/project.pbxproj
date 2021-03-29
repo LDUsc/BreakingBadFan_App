@@ -608,7 +608,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YK5Y5CA576;
-				INFOPLIST_FILE = "CA_Project1-LukasUD/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BreakingBadFan_App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -627,7 +627,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YK5Y5CA576;
-				INFOPLIST_FILE = "CA_Project1-LukasUD/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BreakingBadFan_App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
