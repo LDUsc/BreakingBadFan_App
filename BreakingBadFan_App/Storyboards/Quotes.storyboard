@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quotes View Controller-->
+        <scene sceneID="0Xl-Ax-TFm">
+            <objects>
+                <viewController storyboardIdentifier="QuotesViewController" modalPresentationStyle="fullScreen" id="LJ3-YD-19z" customClass="QuotesViewController" customModule="CA_Project1_LukasUD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E9C-qi-Pjc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vtw-ZD-wav" customClass="CustomNavigationBar" customModule="CA_Project1_LukasUD" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.96470588239999999" green="0.84313725490000002" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" red="0.96470588239999999" green="0.84313725490000002" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="KLk-Jo-vgq">
+                                        <barButtonItem key="leftBarButtonItem" title="Return" id="t2Q-c0-GCl">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="returnButtonTapped:" destination="LJ3-YD-19z" id="Wjx-BG-kK3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Pij-HX-3jH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" id="0Ib-nQ-M2M">
+                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sKO-1D-yr3"/>
+                        <color key="backgroundColor" red="0.023529411760000001" green="0.38431372549999998" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vtw-ZD-wav" firstAttribute="trailing" secondItem="sKO-1D-yr3" secondAttribute="trailing" id="29z-E3-02I"/>
+                            <constraint firstItem="Pij-HX-3jH" firstAttribute="trailing" secondItem="sKO-1D-yr3" secondAttribute="trailing" id="61W-1f-N8E"/>
+                            <constraint firstItem="Pij-HX-3jH" firstAttribute="top" secondItem="Vtw-ZD-wav" secondAttribute="bottom" id="AUP-o5-gGe"/>
+                            <constraint firstItem="Vtw-ZD-wav" firstAttribute="top" secondItem="sKO-1D-yr3" secondAttribute="top" id="SEo-hu-v4L"/>
+                            <constraint firstItem="Vtw-ZD-wav" firstAttribute="leading" secondItem="sKO-1D-yr3" secondAttribute="leading" id="ccC-FI-lMw"/>
+                            <constraint firstAttribute="bottom" secondItem="Pij-HX-3jH" secondAttribute="bottom" id="gN9-Eq-eOS"/>
+                            <constraint firstItem="Pij-HX-3jH" firstAttribute="leading" secondItem="sKO-1D-yr3" secondAttribute="leading" id="ysb-ap-j3S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="0Ib-nQ-M2M" id="8nO-4H-0fY"/>
+                        <outlet property="navigationBar" destination="Vtw-ZD-wav" id="uVc-Sh-A2h"/>
+                        <outlet property="quotesTableView" destination="Pij-HX-3jH" id="io5-K4-Cin"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C8S-EN-BF8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1779.7101449275365" y="733.92857142857144"/>
+        </scene>
+    </scenes>
+</document>

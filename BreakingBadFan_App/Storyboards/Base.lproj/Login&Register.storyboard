@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Or Register View Contoller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginOrRegisterViewContoller" customModule="CA_Project1_LukasUD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="wC9-6b-hXW">
+                                <rect key="frame" x="50" y="144" width="314" height="308"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MGz-de-xSk">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="41"/>
+                                        <color key="backgroundColor" red="0.96470588239999999" green="0.84313725490000002" blue="0.26274509800000001" alpha="0.59259952910958902" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="amp-mb-fJ0"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Login"/>
+                                            <segment title="Register"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" red="0.96470588239999999" green="0.84313725490000002" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="changeSegmentTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="RdW-PE-CtR"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="R4U-Uw-VGz">
+                                        <rect key="frame" x="0.0" y="67" width="314" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="E4V-Ha-tEe">
+                                        <rect key="frame" x="0.0" y="134" width="314" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="opB-YL-MIf">
+                                        <rect key="frame" x="0.0" y="201" width="314" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oS8-7Q-ezb" customClass="CustomButton" customModule="CA_Project1_LukasUD" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="268" width="314" height="40"/>
+                                        <color key="backgroundColor" red="0.96470588239999999" green="0.84313725490000002" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="haz-sD-fkI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="oS8-7Q-ezb" firstAttribute="leading" secondItem="wC9-6b-hXW" secondAttribute="leading" id="1sJ-ZV-Ggx"/>
+                                    <constraint firstItem="opB-YL-MIf" firstAttribute="height" secondItem="MGz-de-xSk" secondAttribute="height" id="3my-xA-i4W"/>
+                                    <constraint firstItem="E4V-Ha-tEe" firstAttribute="width" secondItem="MGz-de-xSk" secondAttribute="width" id="FiI-EG-q5S"/>
+                                    <constraint firstAttribute="trailing" secondItem="MGz-de-xSk" secondAttribute="trailing" id="UKB-Vh-7j2"/>
+                                    <constraint firstItem="MGz-de-xSk" firstAttribute="leading" secondItem="wC9-6b-hXW" secondAttribute="leading" id="chZ-M1-xIr"/>
+                                    <constraint firstItem="MGz-de-xSk" firstAttribute="top" secondItem="wC9-6b-hXW" secondAttribute="top" id="ckM-GU-WpM"/>
+                                    <constraint firstAttribute="trailing" secondItem="oS8-7Q-ezb" secondAttribute="trailing" id="cyM-xV-RoF"/>
+                                    <constraint firstItem="oS8-7Q-ezb" firstAttribute="height" secondItem="MGz-de-xSk" secondAttribute="height" id="kcq-Yw-ptm"/>
+                                    <constraint firstItem="E4V-Ha-tEe" firstAttribute="height" secondItem="MGz-de-xSk" secondAttribute="height" id="ojf-Rd-MLp"/>
+                                    <constraint firstAttribute="bottom" secondItem="oS8-7Q-ezb" secondAttribute="bottom" id="pbJ-6N-XAI"/>
+                                    <constraint firstItem="R4U-Uw-VGz" firstAttribute="height" secondItem="MGz-de-xSk" secondAttribute="height" id="pyM-FL-IsO"/>
+                                    <constraint firstItem="opB-YL-MIf" firstAttribute="width" secondItem="MGz-de-xSk" secondAttribute="width" id="qs2-8S-fE6"/>
+                                    <constraint firstItem="oS8-7Q-ezb" firstAttribute="width" secondItem="MGz-de-xSk" secondAttribute="width" id="tlh-zk-GxM"/>
+                                    <constraint firstItem="R4U-Uw-VGz" firstAttribute="width" secondItem="MGz-de-xSk" secondAttribute="width" id="zoa-lG-1W7"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.023529411760000001" green="0.38431372549999998" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wC9-6b-hXW" secondAttribute="trailing" constant="50" id="EvZ-BQ-Odz"/>
+                            <constraint firstItem="wC9-6b-hXW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I02-je-A9W"/>
+                            <constraint firstItem="wC9-6b-hXW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="SFa-46-E3J"/>
+                            <constraint firstItem="wC9-6b-hXW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="WMX-tg-fVO"/>
+                            <constraint firstItem="wC9-6b-hXW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="100" constant="200" id="YDN-sU-4OQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextfield" destination="opB-YL-MIf" id="bPk-e3-3bj"/>
+                        <outlet property="passwordTextfield" destination="E4V-Ha-tEe" id="v9M-0b-rQk"/>
+                        <outlet property="segmentControl" destination="MGz-de-xSk" id="dPA-Pt-0ew"/>
+                        <outlet property="submitButton" destination="oS8-7Q-ezb" id="D2W-G7-jmF"/>
+                        <outlet property="usernameTextField" destination="R4U-Uw-VGz" id="it4-pA-z1s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-243.47826086956525" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
