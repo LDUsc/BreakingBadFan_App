@@ -1,5 +1,7 @@
 # BreakingBadFan_App
- A trivia app, based on TV series "Breaking Bad", where fans can look up details about episodes, characters and save their favourite quotes
+ A trivia app, based on TV series "Breaking Bad", where users can look up details about episodes, characters and save their favourite quotes.
+
+This application uses Breaking Bad API: https://breakingbadapi.com.
 
 <p align="center">
   <img width="400" src="/HomeScreen.png">
