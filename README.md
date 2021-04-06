@@ -14,6 +14,7 @@ This application uses Breaking Bad API: https://breakingbadapi.com
 
 <p align="center">
   <img width="300" src="/HomeScreen.png">
+  <img src="/BreakingBadAppDemo.gif" width="300">
 </p>
 
 ## - Episodes 
@@ -35,6 +36,8 @@ Users can filter episodes by:
 
 <p align="center">
 <img src="/EpisodesFilterScreen.png" width="270" align="center" >
+ <img src="/EpisodesFilterSeasons.png" width="270" align="center" >
+ <img src="/EpisodesFilterDatePicker.png" width="270" align="center" >
  </p>
  
  ## - Characters 
